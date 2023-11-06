@@ -50,7 +50,7 @@ exports.get_treestructure = async (req, res) => {
         }
         
             console.log(meter_relation);
-            // console.log(raw_data);
+          
             const tree = [];
             const nodeMap = {};
 
@@ -121,7 +121,6 @@ exports.get_treestructure = async (req, res) => {
             console.log(error);
             res.status(400).send({ "error": error })
         }
-        // console.log(JSON.stringify(tree, null, 2));
     }
 
 
