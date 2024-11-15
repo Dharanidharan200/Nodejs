@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Chat</title>
+  <style>
+    /* CSS styles for the chatbox */
+    .chatbox {
+      width: 300px;
+      height: 400px;
+      border: 1px solid #ccc;
+      padding: 10px;
+      overflow-y: scroll;
+    }
+  </style>
+</head>
+<body>
+  <h2>Admin Chat</h2>
+  <div id="chatbox" class="chatbox"></div>
+  <input type="text" id="messageInput" placeholder="Type your message" />
+  <span id="typing"></span><br>
+  <button onclick="sendMessage()">Send</button>
+
+<div id="chatbox"></div>
+<button id="clearButton">Clear Chat</button>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

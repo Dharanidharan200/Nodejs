@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>b.html</title>
+</head>
+
+<body>
+    <script>
+        // Retrieve the array from session storage or create an empty array if it doesn't exist
+        var websiteUrls = JSON.parse(sessionStorage.getItem('websiteUrls')) || [];
+        websiteUrls.push(window.location.href);
+        sessionStorage.setItem('websiteUrls', JSON.stringify(websiteUrls));
+
+//192.168.8.33/rd2/800_Projects/800-02_SYNTIME/800-03_SYNTIME-V3/99_Archive/1.SYNTIME%20TOOL/02.SANDS%20RF%20ANTENNA/1.RF%20ANTENNA_SANDS%20CBT/04.WORK%20INSTRUCTION
+
+        console.log(websiteUrls);
+        // Function to get the search engine name if the user agent belongs to a search engine
+function getSearchEngine() {
+    var userAgent = navigator.userAgent.toLowerCase();
+    // List of common search engine user agents along with their names
+    var searchEngines = [
+        { name: "Google", identifier: "google" },
+        { name: "Bing", identifier: "bing" },
+        { name: "Yahoo", identifier: "yahoo" },
+        { name: "Baidu", identifier: "baidu" },
+        { name: "Yandex", identifier: "yandex" }
+        // Add more search engines as needed
+    ];
+    // Check if the user agent contains any of the search engine identifiers
+    for (var i = 0; i < searchEngines.length; i++) {
+        if (userAgent.indexOf(searchEngines[i].identifier) !== -1) {
+            return searchEngines[i].name;
+        }
+    }
+    return "Unknown Search Engine";
+}
+
+// Example usage
+var searchEngineName = getSearchEngine();
+console.log("User is using", searchEngineName);
+
+
+    </script>
+    <a href="c.html">Go to c.html</a>
+</body>
+
+</html>

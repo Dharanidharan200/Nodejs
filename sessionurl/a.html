@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Engine Identifier</title>
+    <script>
+        // Create 'user' object that will contain Detect.js stuff
+        // Define the user agent string
+        var se = navigator.userAgent
+        console.log(se);
+        // Split the user agent string into an array based on spaces
+        var parts = se.split(" ");
+        console.log(parts,"a");
+        // Output each part
+        console.log("Browser: " + parts[0]); // Mozilla/5.0
+        console.log("OS: " + parts[1]); // (X11;
+        console.log("Platform: " + parts[2]); // Ubuntu;
+        console.log("Architecture: " + parts[3]); // Linux
+        console.log("Version: " + parts[6]); // Firefox/124.0
+
+    </script>
+</head>
+
+<body>
+    <h1 id="searchEngine">Identifying Search Engine...</h1>
+</body>
+
+</html>
